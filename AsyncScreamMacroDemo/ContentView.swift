@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let viewModel = ViewModel()
+    @State private var characterName = ""
 
     var body: some View {
         VStack {
@@ -19,9 +20,14 @@ struct ContentView: View {
             }, label: {
                 Text("Fetch character")
             })
-            Text(viewModel.characterName)
+            Text(characterName)
         }
         .padding()
+        .task {
+            for await name in viewModel.name {
+                characterName = name
+            }
+        }
     }
 }
 
