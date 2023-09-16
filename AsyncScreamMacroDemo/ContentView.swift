@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    let viewModel = ViewModel()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button(action: {
+                Task {
+                    await viewModel.fetchRandomCharacterName()
+                }
+            }, label: {
+                Text("Fetch character")
+            })
+            Text(viewModel.characterName)
         }
         .padding()
     }

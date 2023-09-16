@@ -14,6 +14,8 @@
 		3B3FDB6F2AB5EC4D00450AAA /* AsyncScreamMacroDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FDB6E2AB5EC4D00450AAA /* AsyncScreamMacroDemoTests.swift */; };
 		3B3FDB792AB5EC4D00450AAA /* AsyncScreamMacroDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FDB782AB5EC4D00450AAA /* AsyncScreamMacroDemoUITests.swift */; };
 		3B3FDB7B2AB5EC4D00450AAA /* AsyncScreamMacroDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FDB7A2AB5EC4D00450AAA /* AsyncScreamMacroDemoUITestsLaunchTests.swift */; };
+		3B3FDB882AB5EC8100450AAA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3FDB872AB5EC8100450AAA /* ViewModel.swift */; };
+		3B3FDB8B2AB5ECBE00450AAA /* CreateAsyncStream in Frameworks */ = {isa = PBXBuildFile; productRef = 3B3FDB8A2AB5ECBE00450AAA /* CreateAsyncStream */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		3B3FDB742AB5EC4D00450AAA /* AsyncScreamMacroDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncScreamMacroDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3FDB782AB5EC4D00450AAA /* AsyncScreamMacroDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncScreamMacroDemoUITests.swift; sourceTree = "<group>"; };
 		3B3FDB7A2AB5EC4D00450AAA /* AsyncScreamMacroDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncScreamMacroDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3B3FDB872AB5EC8100450AAA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3FDB8B2AB5ECBE00450AAA /* CreateAsyncStream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 			children = (
 				3B3FDB5D2AB5EC4A00450AAA /* AsyncScreamMacroDemoApp.swift */,
 				3B3FDB5F2AB5EC4A00450AAA /* ContentView.swift */,
+				3B3FDB872AB5EC8100450AAA /* ViewModel.swift */,
 				3B3FDB612AB5EC4D00450AAA /* Assets.xcassets */,
 				3B3FDB632AB5EC4D00450AAA /* Preview Content */,
 			);
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = AsyncScreamMacroDemo;
+			packageProductDependencies = (
+				3B3FDB8A2AB5ECBE00450AAA /* CreateAsyncStream */,
+			);
 			productName = AsyncScreamMacroDemo;
 			productReference = 3B3FDB5A2AB5EC4A00450AAA /* AsyncScreamMacroDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 3B3FDB512AB5EC4A00450AAA;
+			packageReferences = (
+				3B3FDB892AB5ECBE00450AAA /* XCRemoteSwiftPackageReference "CreateAsyncStream" */,
+			);
 			productRefGroup = 3B3FDB5B2AB5EC4A00450AAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3FDB602AB5EC4A00450AAA /* ContentView.swift in Sources */,
+				3B3FDB882AB5EC8100450AAA /* ViewModel.swift in Sources */,
 				3B3FDB5E2AB5EC4A00450AAA /* AsyncScreamMacroDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B3FDB892AB5ECBE00450AAA /* XCRemoteSwiftPackageReference "CreateAsyncStream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dimsumthinking/CreateAsyncStream.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B3FDB8A2AB5ECBE00450AAA /* CreateAsyncStream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B3FDB892AB5ECBE00450AAA /* XCRemoteSwiftPackageReference "CreateAsyncStream" */;
+			productName = CreateAsyncStream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B3FDB522AB5EC4A00450AAA /* Project object */;
 }

@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "createasyncstream",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dimsumthinking/CreateAsyncStream.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6da68630253e45eb71b6849ca00b9bc22a5bb5aa"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "74203046135342e4a4a627476dd6caf8b28fe11b",
+        "version" : "509.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
